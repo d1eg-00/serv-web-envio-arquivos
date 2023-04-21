@@ -30,6 +30,12 @@ const servidor = http.createServer((req, res) => {
 
 })
 
+function listarArquivos(diretorio) {
+   let listagemArquivos = fs.readdirSync(diretorio)
+   console.log(listagemArquivos)
+}
+listarArquivos('./enviodearquivo')
+
 servidor.listen(porta, () => { console.log('Servidor Rodando!') })
 
 
