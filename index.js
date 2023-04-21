@@ -30,7 +30,10 @@ const servidor = http.createServer((req, res) => {
 
 })
 
-function listarArquivos(diretorio) {
+function listarArquivos(diretorio, arquivos) {
+
+   if (!arquivos)
+      arquivos = []
    let listagemArquivos = fs.readdirSync(diretorio)
    console.log(listagemArquivos)
 }
